@@ -23,3 +23,5 @@ $minutes = floor($seconds / 60) % 60; // and how many minutes is that?
 echo "Winner In $hours hours $minutes minutes";
 ?>
 
+test
+
