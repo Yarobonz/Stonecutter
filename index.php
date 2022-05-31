@@ -1,16 +1,18 @@
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active">Home</a>
   <a href="#Stocks">Stocks</a>
   <a href="#Lottery">Lottery</a>
   <a href="#Shops">Shops</a>
   <a href="#Investments">Investments</a>
-  <a href="login.php">Login</a>
+  <a href="Login.php">Login</a>
 </div>
+
+
 
 <html>
   <head>
     <style>
-    <?php include 'index.css'; ?>
+    <?php include 'CSS/index.css'; ?>
     </style>
     <title>World Wide Bank</title>
   </head>
