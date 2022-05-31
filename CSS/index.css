@@ -1,18 +1,21 @@
 body{
-  background-color:#edf2f4;
-  color: black; 
+  background-color:#0d1d1f;
+  background-image: linear-gradient(to top right, #123b40, #080808);
+  color: #E9ECF5; 
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #edf2f4;
+  background-color: #0d1d1f;
+  background-image: linear-gradient(to top right, #0c2327, #050505);
+  padding:5px;
   overflow: hidden;
 }
 
 /*so what do you think? i honistly cannot choose */
 /*I think probably dark */
-
+/* dark blue background? I was just seeing how it looked on the site since it is in the picture, but if you want we could do that as well
 /* Style the links inside the navigation bar */
 .topnav a {
   font-family: Arial, Helvetica, sans-serif;
