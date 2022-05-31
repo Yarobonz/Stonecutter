@@ -22,8 +22,7 @@ if($_GET['Password']==getenv('Password')){
       while (($line = fgets($handle)) !== false) {
         if(strtolower($_GET['Username'])==strtolower(explode("|",$line)[1])){
           $Money=explode("|",$line)[4];
-          $Mathed=$Money+$_GET['Money'];
-          $modifed=str_replace("${Money}|","${Mathed}|",$line);
+          $modifed=str_replace("${Money}|",$_GET['Money'] .="|",$line);
           fileReplaceContent("../Accounts.encrypted", $line, $modifed);
         }
       }

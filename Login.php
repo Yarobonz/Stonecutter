@@ -18,32 +18,38 @@
   </head>
   <body>
     <h1 class="login">Login Page</h1>
+
+  <div class="container">
+    <form action="/Backend/Login.php" method="post">
+      
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    
+    <button onclick="SubmitLogin()" type="submit">Login</button>
+
+    </form>
+  </div>
+    
+  <div class="container" style="background-color:#37393A"> 
   
+  <span class="psw" onclick="window.location.href='Register.php'">Register</a>
+  </span>
+
+  </div>
+
   <script>
-  $users = array("no");
-  
-  function SubmitLogin(username) {
-    alert(username);
+    
+  function SubmitLogin() {
+    
+    alert($_GET['uname']);
     
     window.location = "Dashbaord.php";
     
   }
   
   </script>
-  
-<form action="/Backend/Login.php" method="post">
-
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button onclick="SubmitLogin($_POST['uname'])" type="submit">Login</button>
-  </div>
-
-  <div class="container" style="background-color:#37393A">
-    <span class="psw" onclick="window.location.href='Register.php'">Register</a></span>
+    
   </body>
-  </html>
+</html>
