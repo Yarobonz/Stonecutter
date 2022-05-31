@@ -16,7 +16,7 @@ function str_replace_n($search, $replace, $subject, $occurrence)
 
 if($_GET['Password']==getenv('Password')){
   
-  $handle = fopen("../Accounts.encrypted", "r");
+  $handle = fopen("../../Accounts.encrypted", "r");
   
   if ($handle) {
       while (($line = fgets($handle)) !== false) {
@@ -24,7 +24,7 @@ if($_GET['Password']==getenv('Password')){
           $Money=explode("|",$line)[4];
           $Mathed=$Money+$_GET['Money'];
           $modifed=str_replace("${Money}|","${Mathed}|",$line);
-          fileReplaceContent("../Accounts.encrypted", $line, $modifed);
+          fileReplaceContent("../../Accounts.encrypted", $line, $modifed);
         }
       }
   

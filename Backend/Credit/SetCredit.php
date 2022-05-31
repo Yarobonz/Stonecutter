@@ -16,14 +16,14 @@ function str_replace_n($search, $replace, $subject, $occurrence)
 
 if($_GET['Password']==getenv('Password')){
   
-  $handle = fopen("../Accounts.encrypted", "r");
+  $handle = fopen("../../Accounts.encrypted", "r");
   
   if ($handle) {
       while (($line = fgets($handle)) !== false) {
         if(strtolower($_GET['Username'])==strtolower(explode("|",$line)[1])){
-          $Money=explode("|",$line)[4];
-          $modifed=str_replace("${Money}|",$_GET['Money'] .="|",$line);
-          fileReplaceContent("../Accounts.encrypted", $line, $modifed);
+          $Credit=explode("|",$line)[5];
+          $modifed=str_replace("|${Credit} ","|${$_GET['Credit']} ",$line);
+          fileReplaceContent("../../Accounts.encrypted", $line, $modifed);
         }
       }
   

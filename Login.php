@@ -23,30 +23,26 @@
     <form action="/Backend/Login.php" method="post">
       
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="uname" id="usr" required>
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" id="passwd" name="psw" required>
     
     <button onclick="SubmitLogin()" type="submit">Login</button>
-
-    </form>
-  </div>
-    
-  <div class="container" style="background-color:#37393A"> 
   
-  <span class="psw" onclick="window.location.href='Register.php'">Register</a>
-  </span>
-
+    <span class="psw" onclick="window.location.href='Register.php'">Register</a>
+    </span>
+    </form>
   </div>
 
   <script>
-    
+
   function SubmitLogin() {
-    
-    alert($_GET['uname']);
-    
-    window.location = "Dashbaord.php";
-    
+  
+    var Username = document.getElementById('usr').value;
+    var Password = document.getElementById('passwd').value;
+    var URL='https://stonecutter.yarobonz.repl.co/Backend/Login.php?Username='+Username+'&Password='+btoa(Password)+'';
+
+
   }
   
   </script>
