@@ -1,15 +1,10 @@
 <?php
-$handle = curl_init('https://eoon1r728et4iac.m.pipedream.net');
 
-$data = [
-    'key' => 'value'
-];
 
-$encodedData = json_encode($data);
+$USERNAME= $_POST['uname'];
+$PASSWORD= $_POST['psw'];
+$hashed_password = password_hash($PASSWORD, PASSWORD_DEFAULT);
 
-curl_setopt($handle, CURLOPT_POST, 1);
-curl_setopt($handle, CURLOPT_POSTFIELDS, $encodedData);
-curl_setopt($handle, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
-$result = curl_exec($handle);
+//We have password hasing working
 ?>

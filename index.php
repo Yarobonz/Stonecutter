@@ -1,7 +1,7 @@
 <div class="topnav">
   <a class="active">Home</a>
   <a href="#Stocks">Stocks</a>
-  <a href="#Lottery">Lottery</a>
+  <a href="Lottery.php">Lottery</a>
   <a href="#Shops">Shops</a>
   <a href="#Investments">Investments</a>
   <a href="Login.php">Login</a>

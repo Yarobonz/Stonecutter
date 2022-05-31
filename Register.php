@@ -1,7 +1,7 @@
 <div class="topnav">
   <a href="index.php">Home</a>
   <a href="#Stocks">Stocks</a>
-  <a href="#Lottery">Lottery</a>
+  <a href="Lottery.php">Lottery</a>
   <a href="#Shops">Shops</a>
   <a href="#Investments">Investments</a>
   <a class="active">Login</a>
@@ -21,19 +21,8 @@
 <body>
 <h1 class="Register">Register Page</h1>
 
-  <script>
-  
-  function RegisterAccount() {
-    alert("Test Register");
 
-    window.location = "Login.php";
-    
-  }
-  
-  </script>
-
-
-<form action="/Backend/Login.php" method="post">
+<form action="/Backend/Register.php" method="post">
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
